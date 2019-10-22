@@ -1,0 +1,64 @@
+CREATE SEQUENCE seq_aluno
+start with 1
+increment by 1
+nocache
+nocycle;
+
+CREATE SEQUENCE seq_materia
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+
+CREATE SEQUENCE seq_professores
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+
+CREATE SEQUENCE seq_matricula
+START WITH 1
+INCREMENT BY 1
+NOCYCLE
+NOCACHE;
+
+CREATE SEQUENCE seq_aula
+START WITH 1
+INCREMENT BY 1
+NOCYCLE
+NOCACHE;
+--drop sequence seq_aluno;
+
+CREATE OR REPLACE PROCEDURE insere_aluno(
+	nomA varchar2,
+	datA date,
+	cpfA varchar2,
+	celA number) IS
+begin 
+	insert into alunos(id_aluno, nome, dt_nasc, cpf, cel ) values (seq_aluno.NEXTVAL, nomA, datA, cpfA, celA);
+	
+	commit work;
+end;
+
+CREATE OR REPLACE PROCEDURE insere_materia(
+	nm varchar2,
+	tip varchar2
+) IS 
+BEGIN
+	INSERT INTO materia(id_materia, nome, tipo) VALUES (seq_materia.NEXTVAL, nm, tip);
+	
+	COMMIT WORK;
+END;
+
+CREATE OR REPLACE PROCEDURE insere_professores(
+	nm in varchar2,
+	dt in date,
+	cpfProf in varchar2,
+	curs in varchar2
+)IS
+BEGIN
+	INSERT INTO professores(id_prof, nome, dt_nasc, cpf, curso) VALUES (seq_professores.NEXTVAL, nm, dt, cpfProf, curs);
+	
+	COMMIT WORK;
+END;
+
