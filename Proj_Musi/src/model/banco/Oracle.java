@@ -39,7 +39,7 @@ public class Oracle {
 	
 	/*é de tipo inteiro poir o executeUpdate retorna em inteiro as linhas que vão ser afetadas
 	 ** executeUpdate(ele quem executa comandos para insert, delete e update do sql)**/
-	public int modifica(String sql) {
+	public int dml(String sql) {
 		int resultado = 0;
 		try {
 			resultado = comand.executeUpdate(sql);

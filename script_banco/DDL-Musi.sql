@@ -1,3 +1,12 @@
+CREATE TABLE login(
+	id_login number(9),
+	email varchar2(50) not null,
+	senha varchar2(30) not null,
+	nv_acesso varchar2(50) not null,
+	CONSTRAINT pk_login PRIMARY KEY (id_login),
+	CONSTRAINT uni_login UNIQUE (email)
+);
+
 CREATE TABLE alunos (
 	id_aluno number(12) ,
 	nome varchar2(50) not null,

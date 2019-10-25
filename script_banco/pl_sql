@@ -27,7 +27,23 @@ START WITH 1
 INCREMENT BY 1
 NOCYCLE
 NOCACHE;
---drop sequence seq_aluno;
+
+CREATE SEQUENCE seq_login
+START WITH 1
+INCREMENT BY 1
+NOCYCLE
+NOCACHE;
+drop sequence seq_login;
+
+CREATE OR REPLACE PROCEDURE insere_login(
+	emailL varchar2,
+	senhaL varchar2,
+	acesso varchar2) IS
+begin 
+	insert into login(id_login, email, senha, nv_acesso ) values (seq_login.NEXTVAL, emailL, senhaL, acesso);
+	
+	commit work;
+end;
 
 CREATE OR REPLACE PROCEDURE insere_aluno(
 	nomA varchar2,
