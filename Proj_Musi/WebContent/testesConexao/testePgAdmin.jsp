@@ -32,7 +32,7 @@
 						out.println("<p> ----------------- </p>");
 					} while (rs.next());
 				}else{
-					out.println("<p> não existe </p>");
+					out.println("<p> Não existe este usuário. </p>");
 				}
 			}catch(SQLException ex){
 				out.println("Erro:" + ex);
