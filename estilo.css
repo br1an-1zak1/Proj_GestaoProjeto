@@ -1,0 +1,101 @@
+body{
+	background-color: rgb(232, 237, 240);
+	margin: 0;
+	padding: 0;
+}
+
+.rodape{
+   background-color: black;
+   color:white;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 10px;
+   height: 40px;
+
+}
+
+
+.navbar{
+   float: left;
+   width: 100px;
+   height: 1011px;
+   justify-content: center;
+
+}
+
+body h1{
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+}
+
+.formulario{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 3.3em;
+ }
+
+.NavCor li a{
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.rodape p{
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 30px;
+   color: #fff;
+   margin-top: 10px;
+   height: 5px;
+}
+
+.corFundo{
+   color: rgb(255, 255, 255);
+   background-color: black;
+   height: 70px;
+}
+
+
+
+.info{
+   margin-top: 30px;
+   background-color: rgb(185, 196, 139);
+   border-radius: 10px;
+   border: 20px; 
+}
+
+.deslogar{
+   margin-top: 80px;
+   justify-items: center;
+}
+
+.nav-item :hover{
+   background: rgb(197, 13, 13);
+}
+
+.conteudo{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2em;
+}
+
+
+td{
+	margin-left: 10px;
+	width: 351px;
+}
+
+
+@media screen and (min-width: 100px) and (max-width: 556px){
+   .navbar{
+	   float: left;
+	   width: 100px;
+	   height: 1059px;
+	   justify-content: center;
+	   }
+
+   }
+
