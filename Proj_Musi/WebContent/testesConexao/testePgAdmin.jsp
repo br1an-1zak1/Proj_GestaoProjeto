@@ -31,6 +31,7 @@
 						out.println("<p>"+rs.getString(4) +"</p>");
 						out.println("<p> ----------------- </p>");
 					} while (rs.next());
+					response.sendRedirect("testePgForm.jsp");
 				}else{
 					out.println("<p> Não existe este usuário. </p>");
 				}
