@@ -23,15 +23,15 @@
 		<input type="submit" value="Confirme">
 	</form>
 	
-	<form action="testePgForm.jsp" method="post">
+	<form action="../ControllerProfessor" method="post">
 		<label>
 			Nome: <br>
-			<input type="email" name="emailInsere">
+			<input type="text" name="nomeInsere">
 		</label>
 		<br>
 		<label>
 			Nasc: <br>
-			<input type="date" name="dtNascInsere">
+			<input type="text" name="dtInsere">
 		</label>
 		<br>
 		<label>
@@ -45,7 +45,7 @@
 		</label>
 		<br>
 		
-		<input type="submit" value="confirme">
+		<input type="submit" name="inserir" value="Inserir">
 	</form>
 </body>
 </html>

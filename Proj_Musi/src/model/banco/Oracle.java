@@ -8,10 +8,10 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 
 public class Oracle {
-	private String url = "jdbc:oracle:thin:@localhost:1521:brian";
+	public String url = "jdbc:oracle:thin:@localhost:1521:brian";
 	private String driver = "oracle.jdbc.driver.OracleDriver";
-	private String usuario = "Fatec_Sem4";
-	private String senha = "nivaldo";
+	public String usuario = "Fatec_Sem4";
+	public String senha = "nivaldo";
 	private Connection conexao = null;
 	private PreparedStatement comando = null;
 	private Statement comand = null;
@@ -26,7 +26,7 @@ public class Oracle {
 		}
 		return retorno;
 	}
-	
+
 	public ResultSet consulta(String sql) {
 		ResultSet resultado = null;
 		try {
@@ -37,18 +37,20 @@ public class Oracle {
 		return resultado;
 	}
 	
+	
 	/*é de tipo inteiro poir o executeUpdate retorna em inteiro as linhas que vão ser afetadas
 	 ** executeUpdate(ele quem executa comandos para insert, delete e update do sql)**/
-	public int dml(String sql) {
+	public int modifica(String sql) {
 		int resultado = 0;
 		try {
 			resultado = comand.executeUpdate(sql);
+			conexao.commit();
 		}catch(SQLException ex) {
 			System.out.println("Erro: " + ex.toString());
 		}
 		return resultado;
 	}
-	
+
 	/* método para carregar o driver do JDBC */
 	public boolean carregaDriver() {
 		boolean retorno = false;
