@@ -13,15 +13,6 @@ body{
    
 }
 
-
-.navbar{
-   float: left;
-   width: 100px;
-   height: 1007.5px;
-   justify-content: center;
-
-}
-
 body h1{
    font-family: Arial, Helvetica, sans-serif;
    text-align: center;
@@ -54,15 +45,19 @@ body h1{
 .corFundo{
    color: rgb(255, 255, 255);
    background-color: black;
+   text-align: center;
    height: 70px;
    padding: 10px;
+}
+
+.botao{
+   margin-left: 85%;
 }
 
 
 
 .info{
    margin-top: 30px;
-   background-color: rgb(185, 196, 139);
    border-radius: 10px;
    border: 20px; 
 }
@@ -96,12 +91,6 @@ td{
 
 
 @media screen and (min-width: 70px) and (max-width: 556px){
-   .navbar{
-	   float: left;
-	   width: 100px;
-	   height: 1007.5px;
-	   justify-content: center;
-      }
 
       .rodape{
          background-color: black;
@@ -111,5 +100,5 @@ td{
          height: 50px;
       
       }
-      
+
    }
