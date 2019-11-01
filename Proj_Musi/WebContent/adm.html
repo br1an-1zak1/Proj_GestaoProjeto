@@ -46,7 +46,7 @@
                 <td>
                     aaaaaaaaaaaaa
                 </td>
-                <td style="margin-right: 50px;">
+                <td>
                     aaaaaaaaaaaaa
                 </td>
             </tr>
@@ -58,7 +58,7 @@
                 <td>
                     aaaaaaaaaaaaa
                 </td>
-                <td style="margin-right: 50px;">
+                <td>
                     aaaaaaaaaaaaa
                 </td>
             </tr>
@@ -70,7 +70,7 @@
                 <td>
                     aaaaaaaaaaaaa
                 </td>
-                <td style="margin-right: 50px;">
+                <td>
                     aaaaaaaaaaaaa
                 </td>
             </tr>
@@ -82,7 +82,7 @@
                 <td>
                     aaaaaaaaaaaaa
                 </td>
-                <td style="margin-right: 50px;">
+                <td>
                     aaaaaaaaaaaaa
                 </td>
             </tr>
@@ -92,33 +92,42 @@
 
     <section id="comente" class="formulario">
         <div>
-            <h1 class="txt-center">Cadastre aqui!</h1>
+            <h1 class="txt-center ">Cadastre aqui!</h1>
             <form id="espacoBranco" method="GET" class="formulario" onsubmit="return validar();">
 
                 <label for="tNome"> Nome: </label>
-                <input id="tNome" style="text-align:center;" type="text" id="fNome" name="txtNome" maxlength="50"
-                    placeholder="Digite seu nome" required>
-                <p id="inpNome"></p>
+                <div class="progress campo">
+                        <input  class="text-center progress-bar bg-dark" id="tNome" class="text-center" type="text" id="fNome" name="txtNome" maxlength="50"
+                        placeholder="Digite seu nome" required>
+                    <p id="inpNome"></p>
+                </div>
+                
                 <br>
 
-                <label for="tdataNasc"> Data de Nascimento </label>
-                <input id="tdataNasc" style="text-align:center;" type="text" id="tdataNasc" name="tdataNasc"
+                <label for="tdataNasc"> Data de Nascimento: </label>
+                <div class="progress campo">
+                <input class="text-center progress-bar bg-dark" id="tdataNasc" class="text-center" type="text" id="tdataNasc" name="tdataNasc"
                     maxlength="60" placeholder="EX: XX/XX/XXXX" required>
-                <p id="inpEmail"></p>
+                </div>
                 <br>
 
                 <label for="tCpf">C.P.F: </label>
-                <input id="tCpf" class="text-center" type="text" name="txtcpf" id="tCpf" maxlength="15" size="20"
-                    placeholder="Ex: XXX.XXX.XXX-XX" onblur="cpf();">
+                <div class="progress campo">
+                        <input class="text-center progress-bar bg-dark" id="tCpf" class="text-center" type="text" name="txtcpf" id="tCpf" maxlength="15" size="20"
+                        placeholder="Ex: XXX.XXX.XXX-XX" onblur="cpf();">
+                </div>
+                
                 <br />
-
-                <label id="tcomentario" for="convMaiusculo">Curso</label>
-                <input style="text-align:center;" type="text" name="tCurso" size="20" maxlength="50"
+               
+                <label id="tcomentario" for="convMaiusculo">Curso:</label>
+                <div class="progress campo"> 
+                <input  class="text-center progress-bar bg-dark" type="text" name="tCurso" size="20" maxlength="50"
                     placeholder="Digite o curso">
+                </div>
                 <div>
                     <br />
-                    <button id="btnEnviar" type="submit" name="btnEnviar">Enviar</button>
-                    <button type="reset" name="btnCancelar">Remover</button>
+                    <button class="btn btn-primary mb-2" id="btnEnviar" type="submit" name="btnEnviar">Enviar</button>
+                    <button type="reset" class="btn btn-primary mb-2" name="btnCancelar">Remover</button>
                 </div>
 
             </form>
