@@ -12,8 +12,8 @@
 </head>
 <body>
 	<%
-		String email = request.getParameter("email");
-		String senha = request.getParameter("senha");
+		String email = (String) session.getAttribute("email");
+		String senha = (String) session.getAttribute("senha");
 		Oracle ora = new Oracle();
 
 		if (ora.carregaDriver() && 
@@ -22,23 +22,28 @@
 			String sql;
 			sql = "SELECT * FROM login where email = '" + email + "'and senha = '" + senha + "'";
 			ResultSet rs = ora.consulta(sql);
-			try{
-				if(rs.next()){
+			//try{
+				
+			/*	if(rs.next()){
 					do{
 						out.println("<p>"+rs.getString(1) +"</p>");
 						out.println("<p>"+rs.getString(2) +"</p>");
 						out.println("<p>"+rs.getString(3) +"</p>");
 						out.println("<p>"+rs.getString(4) +"</p>");
 						out.println("<p> ----------------- </p>");
-					} while (rs.next());
-				/*	response.sendRedirect("testePgForm.jsp"); */
+					} while (rs.next()); */
+				if(rs != null){
+					response.sendRedirect("sucesso.jsp");
 				}else{
-					out.println("<p> Não existe este usuário. </p>");
+					session.setAttribute("mensagem", "Este usuário não existe!");
+					response.sendRedirect("testePgForm.jsp"); 
 				}
-			}catch(SQLException ex){
+			/*}catch(SQLException ex){
 				out.println("Erro:" + ex);
-			}
+			}*/
 		}
 	%>
+	<br>
+	<a href="testePgForm.jsp">Sair</a>
 </body>
 </html>

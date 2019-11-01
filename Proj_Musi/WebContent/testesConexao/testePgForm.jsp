@@ -7,20 +7,35 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="testePgAdmin.jsp" method="post">
+	<form action="testePgForm.jsp" method="post">
 		<label>
 			Email: <br>
 			<input type="email" name="email">
 		</label>
 		<br>
-		
+
 		<label>
 			Senha: <br>
 			<input type="text" name="senha">
 		</label>
 		<br>
+		<%
+			String email = request.getParameter("email");
+			String senha = request.getParameter("senha");
+			
+			if(email !=null && senha!=null && !email.isEmpty() && !email.isEmpty()){
+				session.setAttribute("email", email);
+				session.setAttribute("senha", senha);
+				response.sendRedirect("testePgAdmin.jsp");
+			}
+			
+			String msgErro = (String) session.getAttribute("mensagem");
+			
+		%>
+		
 		
 		<input type="submit" value="Confirme">
+		<p> <% out.println(msgErro); %></p>
 	</form>
 	
 	<form action="../ControllerProfessor" method="post">
