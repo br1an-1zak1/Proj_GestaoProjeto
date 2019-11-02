@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="testePgForm.jsp" method="post">
+	<form action="../ControllerLogin" method="post">
 		<label>
 			Email: <br>
 			<input type="email" name="email">
@@ -19,7 +19,9 @@
 			<input type="text" name="senha">
 		</label>
 		<br>
-		<%
+	
+		<input type="submit" name="loga" value="botao">
+		<!--/*
 			String email = request.getParameter("email");
 			String senha = request.getParameter("senha");
 			
@@ -30,12 +32,7 @@
 			}
 			
 			String msgErro = (String) session.getAttribute("mensagem");
-			
-		%>
-		
-		
-		<input type="submit" value="Confirme">
-		<p> <% out.println(msgErro); %></p>
+			*/-->
 	</form>
 	
 	<form action="../ControllerProfessor" method="post">
