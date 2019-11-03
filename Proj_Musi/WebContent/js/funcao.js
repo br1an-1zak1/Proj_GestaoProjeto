@@ -7,33 +7,6 @@ function espacoBranco(objeto) {
     return false;
 }
 
-function formatoEmail(objeto) {
-    if (objeto.value.includes("@gmail.com")) {
-        return true;
-    }
-    alert("Formato de E-mail incompativel")
-    return false;
-}
-
-$(document).ready(
-    function(){
-        $("form").submit(
-            function(){
-                $("form").append("<p id = 'formato'> </p>");
-                let objeto = {
-                    "nome" : $("#tNome").val(),
-                    "Email" : $("#tEmail").val(),
-                    "Cpf" : $("#tCpf").val()
-                    // "nome": $('#tNome').val(),  
-                };
-                let html = JSON.stringify(objeto, 0, 4);
-                $("#formato").text(html);
-                return false;
-            }
-        );
-    }
-)
-
 function data() {
     let dtnasc = document.getElementById("dtnasc").value, dtNovo = "";
     for (let x = 0; x <= dtnasc.length  ; x++) {
