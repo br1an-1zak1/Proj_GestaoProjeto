@@ -28,7 +28,7 @@
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-success my-2 my-sm-0 mt-0" type="submit">Sair</button>
+                    <button class="btn btn-info my-2 my-sm-0 mt-0" type="submit">Sair</button>
                 </form>
             </div>
         </nav>
@@ -95,9 +95,9 @@
             <h1 class="txt-center ">Cadastre aqui!</h1>
             <form action="" method="POST" id="espacoBranco" class="formulario" onsubmit="return validar();">
 
-                <label for="nome"> Nome: </label>
+                <label for="tNome"> Nome: </label>
                 <div class="progress campo">
-                        <input  class="text-center progress-bar bg-dark" id="nome" class="text-center" type="text" name="nome" maxlength="50"
+                        <input  class="text-center progress-bar bg-dark" id="tNome" class="text-center" type="text" name="tNome" maxlength="50"
                         placeholder="Digite seu nome" required>
                     <p id="inpNome"></p>
                 </div>
@@ -106,22 +106,22 @@
 
                 <label for="dtnasc"> Data de Nascimento: </label>
                 <div class="progress campo">
-                <input class="text-center progress-bar bg-dark" id="tdataNasc" class="text-center" type="text" id="tdataNasc" name="dtnasc"
-                    maxlength="60" placeholder="EX: XX/XX/XXXX" required>
+                <input class="text-center progress-bar bg-dark" id="dtnasc" class="text-center" type="text" name="dtnasc"
+                    maxlength="60" onblur="data();" placeholder="EX. XXXXXXXX" required>
                 </div>
-                <br>
+                <br />
 
-                <label for="cpf">C.P.F: </label>
+                <label for="tCpf">C.P.F: </label>
                 <div class="progress campo">
-                        <input class="text-center progress-bar bg-dark" class="text-center" type="text" name="cpf" id="cpf" maxlength="15" size="20"
-                        placeholder="Ex: XXX.XXX.XXX-XX" onblur="cpf();">
+                        <input class="text-center progress-bar bg-dark" class="text-center" type="text" name="tCpf" id="tCpf" placeholder="Digite seu C.P.F" maxlength="15" size="20"
+                         onblur="cpf();">
                 </div>
                 
                 <br />
                
-                <label for="curso">Curso:</label>
+                <label for="tCurso">Curso:</label>
                 <div class="progress campo"> 
-                <input  class="text-center progress-bar bg-dark" type="text" name="curso" size="20" maxlength="50"
+                <input  class="text-center progress-bar bg-dark" type="text" name="tCurso" id="tCurso" size="20" maxlength="50"
                     placeholder="Digite o curso">
                 </div>
                 <div>

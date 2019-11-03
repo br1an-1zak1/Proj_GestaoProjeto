@@ -34,6 +34,19 @@ $(document).ready(
     }
 )
 
+function data() {
+    let dtnasc = document.getElementById("dtnasc").value, dtNovo = "";
+    for (let x = 0; x <= dtnasc.length  ; x++) {
+        dtNovo += dtnasc.charAt(x);
+        if (x == 1) {
+            dtNovo += "/";
+        } else if (x == 3){
+            dtNovo += "/";
+        }
+    }
+    document.getElementById("dtnasc").value =dtNovo;
+} 
+
 function cpf() {
     let tCpf = document.getElementById("tCpf").value, cpfNovo = "";
     for (let x = 0; x <= tCpf.length  ; x++) {
@@ -50,16 +63,17 @@ function cpf() {
 
 function validar() {
     let n = document.getElementById("tNome");
-    let e = document.getElementById("tEmail");
+    let e = document.getElementById("dtnasc");
     let t = document.getElementById("tCpf");
+    let c = document.getElementById("tCurso")
     let armazena = "";
     if (espacoBranco(n) != true) {
         armazena += false;
     } else if (espacoBranco(e) != true) {
         armazena += false;
-    } else if (formatoEmail(e) != true) {
+    } else if (formatoEmail(t) != true) {
         armazena += false;
-    } else if (formatoCpf(t) != true) {
+    } else if (formatoCpf(c) != true) {
         armazena += false;
     }
     return armazena;

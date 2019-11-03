@@ -8,6 +8,22 @@ nav div h1{
    color: #fafafa;
 }
 
+::-webkit-input-placeholder {
+   color: #fafafa;
+}
+ 
+:-moz-placeholder { 
+   color: #fafafa;  
+}
+ 
+::-moz-placeholder {  
+   color: #fafafa;  
+}
+ 
+:-ms-input-placeholder {  
+   color: #fafafa;  
+}
+
 .rodape{
    background-color: #222222;
    color:white;
