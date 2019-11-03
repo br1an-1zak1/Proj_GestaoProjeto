@@ -46,16 +46,16 @@ body h1{
    margin-top: 3.3em;
  }
 
-.NavCor li a{
+/* .NavCor li a{
    color: white;
    font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
 .campo{
    height: 50px;
 }
 
-.rodape p{
+/* .rodape p{
    text-align: center;
    font-family: Arial, Helvetica, sans-serif;
    font-size: 30px;
@@ -63,15 +63,15 @@ body h1{
    margin-top: 10px;
    height: 5px;
    margin-right: 10px;
-}
+} */
 
-.corFundo{
+/* .corFundo{
    color: rgb(255, 255, 255);
    background-color: black;
    text-align: center;
    height: 70px;
    padding: 10px;
-}
+} */
 
 .botao{
    margin-left: 85%;
@@ -98,20 +98,49 @@ body h1{
    background: rgb(197, 13, 13);
 }
 
-.conteudo{
+/* .conteudo{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin-top: 2em;
+} */
+
+.div_select{
+   margin: 0 auto;
+   width: 550px;
+   height: 300px;
+   
+   overflow: auto;
+   
+ }
+
+ .tabela_select td,
+ .tabela_select_dados td {
+   border: none;
+   padding: 20px;
+   text-align: center;
+ }
+
+ .tabela_select_dados tr:nth-child(1){
+   font-weight: bold;
+   background-color: #3DC9B3;
+ }
+
+ .tabela_select_dados tr:nth-child(even) {
+   background-color: #c1eccc;
+ }
+
+h5{
+   display: inline-block;
+   color: #C1ECCC;
 }
 
-
-td{
-	margin-left: 10px;
-	width: 351px;
+@media (max-width: 991px){
+   .main_menu .main-menu-item ul li .nav-link {
+      color: #111;
+    }
 }
-
 
 @media screen and (min-width: 70px) and (max-width: 556px){
 

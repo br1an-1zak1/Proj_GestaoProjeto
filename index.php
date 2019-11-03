@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -16,22 +19,19 @@
 </head>
 
 <body>
-   <!--<Menu topo>-->
-   <header class="main_menu" id="navigation">
+    <!--<Menu topo>-->
+    <header class="main_menu" id="navigation">
         <div class="main_menu_iner">
             <div class="container">
                 <div class="row align-items-center ">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                            <a class="navbar-brand" href="index.html">Musi</a> 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
+                            <a class="navbar-brand" href="index.html">Musi</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 
-                            <div class="collapse navbar-collapse main-menu-item justify-content-center"
-                                id="navbarSupportedContent">
+                            <div class="collapse navbar-collapse main-menu-item justify-content-center" id="navbarSupportedContent">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
                                         <a class="nav-link" href="index.html">Início</a>
@@ -57,7 +57,7 @@
     <div id="showcase">
         <div class="container showcase">
             <div class="full-width text-center showcase-caption mt-30">
-                    <h4>Musi, Escola de música</h4>
+                <h4>Musi, Escola de música</h4>
                 <h1>Os músicos utilizam de todas as liberdades que podem.</h1>
                 <p>Ludwig van Beethoven</p>
             </div>
@@ -102,7 +102,7 @@
                 <div class="col-md-12 text-center">
                     <h2 class="site-section-heading text-uppercase text-center font-secondary">Login</h2>
                 </div>
-    
+
             </div>
         </div>
     </div>
@@ -111,7 +111,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <!--<Formulario>-->
-                    <form action="" method="POST" id="contactForm" data-toggle="validator" data-focus="false">
+                    <form action="php/verifica_login.php" method="POST" id="contactForm" data-toggle="validator" data-focus="false">
                         <div class="form-group">
                             <input type="email" class="form-control-input" name="email" id="cemail" required>
                             <label class="label-control" for="cemail">Email:</label>
@@ -125,7 +125,13 @@
                         <div class="form-group">
                             <button type="submit" name="loga" class="form-control-submit-button" value="Login">Acessar</button>
                         </div>
-    
+                        <?php
+                        if (isset($_SESSION["msglog"])) :
+                            print $_SESSION["msglog"];
+                            unset($_SESSION["msglog"]);
+                        endif;
+                        ?>
+
                     </form>
                     <!--</formulario>-->
                 </div>
