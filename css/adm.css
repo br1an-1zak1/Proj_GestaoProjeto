@@ -94,6 +94,9 @@ body h1{
    justify-items: center;
 }
 
+   .nav-item :hover{
+   background: rgb(197, 13, 13);
+   } 
 
 
 /* .conteudo{
