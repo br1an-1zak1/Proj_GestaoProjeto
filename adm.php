@@ -23,7 +23,7 @@ $con = mysqli_query($conexao, $sql) or die('Erro');
     <header class="main-menu">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="media-body">
-                <h1 href="index.php" class="mt-0">Musi Escola de Músicas</h1>
+                <h1 href="index.php" class="mt-0">Musi</h1>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@ $con = mysqli_query($conexao, $sql) or die('Erro');
                     </li>
 
                     <li class="nav-item">
-                        <p class="nav-link">Usuário logado: <?= $_SESSION["nomeLog"] ?></p>
+                        <a class="nav-link">Usuário logado: <?= $_SESSION["nomeLog"] ?></a>
                     </li>
                 </ul>
                 <form action="php/sair.php" class="form-inline my-2 my-lg-0">

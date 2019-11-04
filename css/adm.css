@@ -94,9 +94,7 @@ body h1{
    justify-items: center;
 }
 
-.nav-item :hover{
-   background: rgb(197, 13, 13);
-}
+
 
 /* .conteudo{
 	display: flex;
@@ -139,7 +137,16 @@ h5{
 @media (max-width: 991px){
    .main_menu .main-menu-item ul li .nav-link {
       color: #111;
-    }
+   }
+    
+   .nav-item a{
+   background-color: #111;
+   }
+
+   .nav-item :hover{
+   background: rgb(197, 13, 13);
+   color: #111;
+   } 
 }
 
 @media screen and (min-width: 70px) and (max-width: 556px){
