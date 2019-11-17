@@ -9,45 +9,66 @@ $con = mysqli_query($conexao, $sql) or die('Erro');
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Musi Escola de Músicas</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/adm.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.ico">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <!-- personalizado -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/default.css">
+
 </head>
 
 <body>
-    <header class="main-menu">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="media-body">
-                <h1 href="index.php" class="mt-0">Musi</h1>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <header class="main_menu" id="navigation">
+        <div class="main_menu_iner">
+            <div class="container">
+                <div class="row align-items-center ">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                            <a class="navbar-brand" href="index.html">Musi</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
 
-            <div class="collapse navbar-collapse main-menu-item" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Início</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link">Usuário logado: <?= $_SESSION["nomeLog"] ?></a>
-                    </li>
-                </ul>
-                <form action="php/sair.php" class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-info my-2 my-sm-0 mt-0" type="submit">Sair</button>
-                </form>
+                            <div class="collapse navbar-collapse main-menu-item justify-content-center" id="navbarSupportedContent">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.php">Início</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">Usuário logado: <?= $_SESSION["nomeLog"] ?></a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a class="nav-link" href="packages.html">Galeria</a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <form action="php/sair.php" class="form-inline my-2 my-lg-0">
+                                <button class="btn_1 d-none d-lg-block" type="submit">Sair</button>
+                            </form>
+                        </nav>
+                    </div>
+                </div>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <div class="info">
-        <h1>Professores Cadastrados</h1>
+    <div class="text-center">
+        <p><a href="index.php"> Página inicial </a> > Cadastro de Professores</p>
+    </div>
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="site-section-heading text-uppercase text-center font-secondary">Professores Cadastrados</h2>
+                </div>
+
+            </div>
+        </div>
     </div>
     <!-- tabelas -->
     <div class="div_select">
@@ -70,83 +91,62 @@ $con = mysqli_query($conexao, $sql) or die('Erro');
 
     </div>
 
-    <section id="comente" class="formulario">
-        <div>
-            <h1 class="txt-center ">Cadastre aqui!</h1>
-            <form action="php/insere_prof.php" method="POST" id="contactForm" data-toggle="validator" data-focus="false">
 
-                <!-- <label for="tNome"> Nome: </label>
-                <div class="progress campo">
-                    <input class="text-center progress-bar bg-dark" id="tNome" class="text-center" type="text" name="nome" maxlength="50" placeholder="Digite seu nome" required>
-                    <p id="inpNome"></p>
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="site-section-heading text-center font-secondary">Cadastre Aqui!</h2>
                 </div>
 
-                <br>
+            </div>
+        </div>
+    </div>
+    <section id="comente" class="form">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <form action="php/insere_prof.php" method="POST" id="contactForm" data-toggle="validator" data-focus="false">
 
-                <label for="dtnasc"> Data de Nascimento: </label>
-                <div class="progress campo">
-                    <input class="text-center progress-bar bg-dark" id="dtnasc" class="text-center" type="date" name="dtnasc" maxlength="60" onkeypress="data();" placeholder="EX. XXXXXXXX" required>
+                        <div class="form-group">
+                            <label for="tNome"> Nome: </label>
+                            <input class="form-control-input" id="tNome" type="text" name="nome" required placeholder="Ex: Eleanora">
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dtnasc"> Data de Nascimento: </label>
+                            <input class="form-control-input" id="dtnasc" type="date" name="dtnasc" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tCpf"> C.P.F: </label>
+                            <input class="form-control-input" id="tCpf" maxlength="14" type="text" name="cpf" required placeholder="Ex: XXX.XXX.XXX-XX">
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tCurso"> Curso: </label>
+                            <input class="form-control-input" id="tCurso" type="text" name="curso" required placeholder="Ex: violino">
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div>
+                            <button class="form-control-submit-button" id="btnEnviar" type="submit" name="btnEnviar">Cadastrar</button>
+                            <br />
+                            <button class="form-control-submit-button" type="reset" name="btnCancelar">Limpar</button>
+                        </div>
+
+                        <?php
+                        if (isset($_SESSION["msg"])) :
+                            print $_SESSION["msg"];
+                            unset($_SESSION["msg"]);
+                        endif;
+                        ?>
+                    </form>
                 </div>
-                <br />
-
-                <label for="tCpf">C.P.F: </label>
-                <div class="progress campo">
-                    <input class="text-center progress-bar bg-dark" class="text-center" type="text" name="tCpf" id="cpf" placeholder="Digite seu C.P.F" maxlength="15" size="20" onkeypress="cpf();" required>
-                </div>
-
-                <br />
-
-                <label for="tCurso">Curso:</label>
-                <div class="progress campo">
-                    <input class="text-center progress-bar bg-dark" type="text" name="curso" id="tCurso" size="20" maxlength="50" placeholder="Digite o curso" required>
-                </div> -->
-
-
-                <div class="form-group">
-                    <label for="tNome"> Nome: </label>
-                    <input class="form-control-input" id="tNome" type="text" name="nome" required placeholder="Ex: Eleanora">
-                    <div class="help-block with-errors"></div>
-                </div>
-
-                <br>
-
-                <div class="form-group">
-                    <label for="dtnasc"> Data de Nascimento: </label>
-                    <input class="form-control-input" id="dtnasc" type="date" name="dtnasc" required>
-                    <div class="help-block with-errors"></div>
-                </div>
-
-                <br />
-
-                <div class="form-group">
-                    <label for="tCpf"> C.P.F: </label>
-                    <input class="form-control-input" id="tCpf" maxlength="14" type="text" name="cpf" required placeholder="Ex: XXX.XXX.XXX-XX">
-                    <div class="help-block with-errors"></div>
-                </div>
-
-
-                <br />
-
-                <div class="form-group">
-                    <label for="tCurso"> Curso: </label>
-                    <input class="form-control-input" id="tCurso" type="text" name="curso" required placeholder="Ex: violino">
-                    <div class="help-block with-errors"></div>
-                </div>
-
-
-                <div>
-                    <br />
-                    <button class="btn btn-primary mb-2" id="btnEnviar" type="submit" name="btnEnviar">Cadastrar</button>
-                    <button type="reset" class="btn btn-primary mb-2" name="btnCancelar">Limpar</button>
-                </div>
-
-                <?php
-                if (isset($_SESSION["msg"])) :
-                    print $_SESSION["msg"];
-                    unset($_SESSION["msg"]);
-                endif;
-                ?>
-            </form>
+            </div>
         </div>
     </section>
 

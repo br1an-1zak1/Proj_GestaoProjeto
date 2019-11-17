@@ -34,7 +34,7 @@ session_start();
                             <div class="collapse navbar-collapse main-menu-item justify-content-center" id="navbarSupportedContent">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="index.html">Início</a>
+                                        <a class="nav-link" href="index.php">Início</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#sobre-menu">Notícias</a>

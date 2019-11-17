@@ -33,6 +33,7 @@ START WITH 1
 INCREMENT BY 1
 NOCYCLE
 NOCACHE;
+
 drop sequence seq_login;
 
 CREATE OR REPLACE PROCEDURE insere_login(

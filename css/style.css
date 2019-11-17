@@ -351,7 +351,8 @@ header{
 
 .form-control-submit-button {
 	display: inline-block;
-	width: 100%;
+  width: 100%;
+  margin-bottom: 20px;
 	height: 3.125rem;
 	border: 2px solid #3DC9B3;
 	border-radius: 1.5rem;
@@ -407,6 +408,30 @@ footer p {
   padding: 35px;
 }
 /*Final Footer*/
+.div_select{
+  margin: 0 auto;
+  width: 550px;
+  height: 300px;
+  
+  overflow: auto;
+  
+}
+
+.tabela_select td,
+.tabela_select_dados td {
+  border: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.tabela_select_dados tr:nth-child(1){
+  font-weight: bold;
+  background-color: #3DC9B3;
+}
+
+.tabela_select_dados tr:nth-child(even) {
+  background-color: #c1eccc;
+}
 
 
 
